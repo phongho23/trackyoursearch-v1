@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
 import dummyStore from '../dummy-store';
 import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
-import './App.css';
+import './App.css'; 
 
 class App extends Component {
     state = {
@@ -38,6 +37,7 @@ class App extends Component {
                         )}
                     />
                 ))}
+
                 <Route
                     path="/note/:noteId"
                     render={routeProps => {
@@ -47,8 +47,11 @@ class App extends Component {
                         return <NotePageNav {...routeProps} folder={folder} />;
                     }}
                 />
+
                 <Route path="/add-folder" component={NotePageNav} />
+
                 <Route path="/add-note" component={NotePageNav} />
+
             </>
         );
     }
@@ -60,18 +63,18 @@ class App extends Component {
                 {['/', '/folder/:folderId'].map(path => (
                     <Route
                         exact
-                        key={path}
-                        path={path}
+                        key={ path }
+                        path={ path }
                         render={routeProps => {
-                            const {folderId} = routeProps.match.params;
+                            const { folderId } = routeProps.match.params;
                             const notesForFolder = getNotesForFolder(
                                 notes,
                                 folderId
                             );
                             return (
                                 <NoteListMain
-                                    {...routeProps}
-                                    notes={notesForFolder}
+                                    { ...routeProps }
+                                    notes={ notesForFolder }
                                 />
                             );
                         }}
@@ -92,14 +95,35 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <nav className="App__nav">{this.renderNavRoutes()}</nav>
+
                 <header className="App__header">
-                    <h1>
-                        <Link to="/">Noteful</Link>{' '}
-                        <FontAwesomeIcon icon="check-double" />
-                    </h1>
+
+                    <a><h1>
+                        <Link to="/">TrackYourSearch</Link>{' '}
+                    </h1></a>
+
+                    <a><h2>
+                        <Link to="/">Home</Link>
+                    </h2></a>
+
+                    <a><h2>
+                        <Link to="/add-folder">Add Week</Link>
+                    </h2></a>
+
+                    <a><h2>
+                        <Link to="/add-note">Add Job</Link>
+                    </h2></a>
+
                 </header>
-                <main className="App__main">{this.renderMainRoutes()}</main>
+
+                <nav className="App__nav">
+                    {this.renderNavRoutes()}
+                </nav>
+
+                <main className="App__main">
+                    {this.renderMainRoutes()}
+                </main>
+
             </div>
         );
     }
