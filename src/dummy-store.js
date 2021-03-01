@@ -1,5 +1,5 @@
 export default {
-  "folders": [
+  "jobweeks": [
     {
       "id": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Week 1"
@@ -33,12 +33,12 @@ export default {
       "name": "Week 8"
     }
   ],
-  "notes": [
+  "jobopps": [
     {
       "id": "cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer I - Target",
-      "modified": "2019-01-03T00:00:00.000Z",
-      "folderId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-01-03T00:00:00.000Z",
+      "weekId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Target",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -49,8 +49,8 @@ export default {
     {
       "id": "d26e0034-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineering Intern - Wal-Mart",
-      "modified": "2018-08-15T23:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-08-15T23:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Wal-Mart",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -61,8 +61,8 @@ export default {
     {
       "id": "d26e01a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Lockheed Martin - Externship through NYU",
-      "modified": "2018-03-01T00:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-03-01T00:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Lockheed Martin",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -73,8 +73,8 @@ export default {
     {
       "id": "d26e0570-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - Google",
-      "modified": "2019-01-04T00:00:00.000Z",
-      "folderId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-01-04T00:00:00.000Z",
+      "weekId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Google",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -85,8 +85,8 @@ export default {
     {
       "id": "d26e0714-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - Facebook",
-      "modified": "2018-07-12T23:00:00.000Z",
-      "folderId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-07-12T23:00:00.000Z",
+      "weekId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Facebook",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -97,8 +97,8 @@ export default {
     {
       "id": "d26e0854-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - Postman",
-      "modified": "2018-08-20T23:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-08-20T23:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Postman",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -109,8 +109,8 @@ export default {
     {
       "id": "d26e0980-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - USPS",
-      "modified": "2018-03-03T00:00:00.000Z",
-      "folderId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-03-03T00:00:00.000Z",
+      "weekId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "USPS",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -121,8 +121,8 @@ export default {
     {
       "id": "d26e0aac-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - Toysrus",
-      "modified": "2018-05-16T23:00:00.000Z",
-      "folderId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-05-16T23:00:00.000Z",
+      "weekId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Toysrus",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -133,8 +133,8 @@ export default {
     {
       "id": "d26e0bce-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - Macy's",
-      "modified": "2018-04-11T23:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-04-11T23:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "Macy's",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -145,8 +145,8 @@ export default {
     {
       "id": "d26e0f48-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - NBA",
-      "modified": "2018-04-26T23:00:00.000Z",
-      "folderId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-04-26T23:00:00.000Z",
+      "weekId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "NBA",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -157,8 +157,8 @@ export default {
     {
       "id": "d26e1074-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - NFL",
-      "modified": "2018-02-05T00:00:00.000Z",
-      "folderId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-02-05T00:00:00.000Z",
+      "weekId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "NFL",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -169,8 +169,8 @@ export default {
     {
       "id": "d26e11a0-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - MLB",
-      "modified": "2018-12-01T00:00:00.000Z",
-      "folderId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-12-01T00:00:00.000Z",
+      "weekId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "MLB",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -181,8 +181,8 @@ export default {
     {
       "id": "d26e12c2-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - MLS",
-      "modified": "2018-09-11T23:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-09-11T23:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "MLS",
       "postedUrl": "http://www.dummyURLplaceholder.com/",
@@ -193,8 +193,8 @@ export default {
     {
       "id": "d26e1452-ffaf-11e8-8eb2-f2801f1b9fd1",
       "name": "Software Engineer - NHL",
-      "modified": "2018-08-13T23:00:00.000Z",
-      "folderId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
+      "modified": "2021-08-13T23:00:00.000Z",
+      "weekId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
       "jobTitle": "Software Engineer",
       "companyName": "NHL",
       "postedUrl": "http://www.dummyURLplaceholder.com/",

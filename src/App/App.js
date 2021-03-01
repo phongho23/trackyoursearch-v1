@@ -1,37 +1,37 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
-import NoteListNav from '../NoteListNav/NoteListNav';
-import NotePageNav from '../NotePageNav/NotePageNav';
-import NoteListMain from '../NoteListMain/NoteListMain';
-import NotePageMain from '../NotePageMain/NotePageMain';
+import JoblistNav from '../JoblistNav/JoblistNav';
+import JobPageNav from '../JobPageNav/JobPageNav';
+import JoblistMain from '../JoblistMain/JoblistMain';
+import JobPageMain from '../JobPageMain/JobPageMain';
+import landingPage from '../landingPage/landingPage';
 import dummyStore from '../dummy-store';
-import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
+import {getJoboppsForWeek, findJobitem, findWeek} from '../jobopps-helpers';
 import './App.css'; 
 
 class App extends Component {
     state = {
-        notes: [],
-        folders: []
+        jobopps: [],
+        jobweeks: []
     };
 
     componentDidMount() {
-        // fake date loading from API call
         setTimeout(() => this.setState(dummyStore), 600);
     }
 
     renderNavRoutes() {
-        const {notes, folders} = this.state;
+        const {jobopps, jobweeks} = this.state;
         return (
             <>
-                {['/', '/folder/:folderId'].map(path => (
+                {['/home', '/home/week/:weekId'].map(path => (
                     <Route
                         exact
                         key={path}
                         path={path}
                         render={routeProps => (
-                            <NoteListNav
-                                folders={folders}
-                                notes={notes}
+                            <JoblistNav
+                                jobweeks={jobweeks}
+                                jobopps={jobopps}
                                 {...routeProps}
                             />
                         )}
@@ -39,82 +39,90 @@ class App extends Component {
                 ))}
 
                 <Route
-                    path="/note/:noteId"
+                    path="/home/Jobitem/:jobId"
                     render={routeProps => {
-                        const {noteId} = routeProps.match.params;
-                        const note = findNote(notes, noteId) || {};
-                        const folder = findFolder(folders, note.folderId);
-                        return <NotePageNav {...routeProps} folder={folder} />;
+                        const {jobId} = routeProps.match.params;
+                        const job = findJobitem(jobopps, jobId) || {};
+                        const week = findWeek(jobweeks, job.weekId);
+                        return <JobPageNav {...routeProps} week={week} />;
                     }}
                 />
 
-                <Route path="/add-folder" component={NotePageNav} />
-
-                <Route path="/add-note" component={NotePageNav} />
-
+                <Route path="/home/add-week" component={JobPageNav} />
+                <Route path="/home/add-job" component={JobPageNav} />
             </>
         );
     }
 
     renderMainRoutes() {
-        const {notes, folders} = this.state;
+        const {jobopps, jobweeks} = this.state;
         return (
             <>
-                {['/', '/folder/:folderId'].map(path => (
+                {['/home', '/home/week/:weekId'].map(path => (
                     <Route
                         exact
                         key={ path }
                         path={ path }
                         render={routeProps => {
-                            const { folderId } = routeProps.match.params;
-                            const notesForFolder = getNotesForFolder(
-                                notes,
-                                folderId
+                            const { weekId } = routeProps.match.params;
+                            const joboppsForWeek = getJoboppsForWeek(
+                                jobopps,
+                                weekId
                             );
                             return (
-                                <NoteListMain
+                                <JoblistMain
                                     { ...routeProps }
-                                    notes={ notesForFolder }
+                                    jobopps={ joboppsForWeek }
                                 />
                             );
                         }}
                     />
                 ))}
                 <Route
-                    path="/note/:noteId"
+                    path="/home/Jobitem/:jobId"
                     render={routeProps => {
-                        const {noteId} = routeProps.match.params;
-                        const note = findNote(notes, noteId);
-                        return <NotePageMain {...routeProps} note={note} />;
+                        const {jobId} = routeProps.match.params;
+                        const job = findJobitem(jobopps, jobId);
+                        return <JobPageMain {...routeProps} job={job} />;
                     }}
                 />
             </>
         );
     }
 
+    renderAppLanding() {
+        return (
+        <Route
+            exact
+            path="/"
+            render={ () => {
+                return <Route exact path="/" component={landingPage} />
+            }}
+        />
+        );
+    }
+
     render() {
         return (
             <div className="App">
-
                 <header className="App__header">
-
                     <a><h1>
-                        <Link to="/">TrackYourSearch</Link>{' '}
+                        <Link to="/home">TrackYourSearch</Link>{' '}
                     </h1></a>
-
                     <a><h2>
-                        <Link to="/">Home</Link>
+                        <Link to="/home">Home</Link>
                     </h2></a>
-
                     <a><h2>
-                        <Link to="/add-folder">Add Week</Link>
+                        <Link to="/home/add-week">Add Week</Link>
                     </h2></a>
-
                     <a><h2>
-                        <Link to="/add-note">Add Job</Link>
+                        <Link to="/home/add-job">Add Job</Link>
                     </h2></a>
-
                 </header>
+
+                <nav className="App__landing">
+                    {this.renderAppLanding()}
+                </nav>
 
                 <nav className="App__nav">
                     {this.renderNavRoutes()}

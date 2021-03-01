@@ -4,6 +4,7 @@
     sans-serif;
   display: block;
   min-height: 100vh;
+  background-color: lightpink;
 }
 
 .App__nav {
@@ -16,11 +17,12 @@
   background-color: blue;
   color: #bdbdbd;
   font-family: var(--custom-font);
-  padding-left: 5%;
   padding-right: 10%;
   padding-top: 32px;
   display: flex;
   padding: 5px 10px;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .App__header a {
@@ -30,7 +32,6 @@
 
 .App__main {
   background-color: lightpink;
-  /* grid-area: main; */
   height: calc(100vh - 120px);
   overflow: auto;
 }

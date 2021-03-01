@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JoblistNav component renders a .JoblistNav by default 1`] = `
+<div
+  className="JoblistNav"
+>
+  <ul
+    className="JoblistNav__list"
+  />
+  <div
+    className="JoblistNav__button-wrapper"
+  >
+    <NavCircleButton
+      className="JoblistNav__add-week-button"
+      tag={[Function]}
+      to="/add-Week"
+      type="button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="plus"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <br />
+      Week
+    </NavCircleButton>
+  </div>
+</div>
+`;
+
+exports[`JoblistNav component renders a link in ul for each week in array 1`] = `
+<ul
+  className="JoblistNav__list"
+>
+  <li
+    key="b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="JoblistNav__week-link"
+      to="/week/b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="JoblistNav__num-jobopps"
+      >
+        2
+      </span>
+      Important
+    </NavLink>
+  </li>
+  <li
+    key="b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="JoblistNav__week-link"
+      to="/week/b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="JoblistNav__num-jobopps"
+      >
+        2
+      </span>
+      Super
+    </NavLink>
+  </li>
+  <li
+    key="b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="JoblistNav__week-link"
+      to="/week/b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="JoblistNav__num-jobopps"
+      >
+        0
+      </span>
+      Spangley
+    </NavLink>
+  </li>
+</ul>
+`;
